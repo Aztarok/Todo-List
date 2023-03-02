@@ -17,11 +17,36 @@
         </div>
         <div class="content">
             <div class="slide">
-                <h1>Projects</h1>
-                <h2>Todo</h2>
+                <h2>Projects</h2>
+                <div class="new-project">
+                    <h4>Add New Project</h4>
+                </div>
+            </div>
+            <div class="projects">
+                <h1>Current Projects</h1>
             </div>
         </div>
+        
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>New Project</h2>
+            <form action="" method="get" id="ProjectForm">
+                <label for="pname">
+                    Project Name: 
+                </label><br/>
+                <input type="text" id="pname" name="pname">
+                <label for="prior"><br/>
+                    Priority
+                </label><br/>
+                <input type="text" id="prior" name="prior">
+                <button class="form-btn">Add Project</button>
+            </form>
+        </div>
+    </div>
+        
     <script src="main.js"></script>
 </body>
+
 </html>
