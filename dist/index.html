@@ -9,38 +9,54 @@
 <body>
     <div class="app">
         <div class="header">
-            <button class="btn">
-                <img height="40px" src="../assets/hamburger.png" alt="hamburger icon">
-            </button>
-            
-            <h1>Todo List</h1>
+
+            <h1 class="side-h">Todo App</h1>
+        </div>
+        <div class="side">
+            <button class="new-project">Add Project</button>
         </div>
         <div class="content">
-            <div class="slide">
-                <h2>Projects</h2>
-                <div class="new-project">
-                    <h4>Add New Project</h4>
-                </div>
-            </div>
-            <div class="projects">
-                <h1>Current Projects</h1>
-            </div>
         </div>
-        
+
     </div>
+
+
+
     <div id="myModal" class="modal">
         <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>New Project</h2>
-            <form action="" method="get" id="ProjectForm">
-                <label for="pname">
-                    Project Name: 
-                </label><br/>
-                <input type="text" id="pname" name="pname">
-                <label for="prior"><br/>
-                    Priority
-                </label><br/>
-                <input type="text" id="prior" name="prior">
+            <div class="modal-header">
+                <h2>New Project</h2>
+                <span class="close">&times;</span>
+            </div>
+            <form method="post" id="ProjectForm" >
+                <div class="pname">
+                    <label for="pname">
+                        Project Name: 
+                    </label><br/>
+                    <input style="width:90%; height: 40%; font-size: 1.2rem;" type="text" id="pname" name="pname" required/>
+                </div>
+                <div class="prior">
+                    <label for="prior">
+                        Priority:
+                    </label><br/>
+                    <select type="select" id="prior" name="prior">
+                        <option value="low">Low</option>
+                        <option value="medium">Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+                <div class="date">
+                    <label for="prior">
+                        Due Date:
+                    </label><br/>
+                    <input type="datetime-local" id="date" name="date" required/>
+                </div>
+                <div class="desc">
+                    <label for="desc">
+                        Description:
+                    </label><br/>
+                    <textarea style="height:100px" type="text" size="30" id="desc" name="desc" required></textarea>
+                </div>
                 <button class="form-btn">Add Project</button>
             </form>
         </div>
@@ -48,5 +64,4 @@
         
     <script src="main.js"></script>
 </body>
-
 </html>
